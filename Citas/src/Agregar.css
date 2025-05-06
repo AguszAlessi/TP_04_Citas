@@ -1,0 +1,52 @@
+.AgregarProblema {
+    flex: 2;
+    min-width: 600px;
+  }
+  
+  .AgregarProblema form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .AgregarProblema input {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+  .AgregarProblema button {
+    padding: 16px;
+    background-color: #FF0066;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 10px;
+  }
+  
+  .AgregarProblema button:hover {
+    background-color: #D41872;
+    transform: scale(1.01);
+  }
+  
+  .alerta-error {
+    background-color: white;
+    color: red;
+    padding: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Staatliches', cursive;
+  }
