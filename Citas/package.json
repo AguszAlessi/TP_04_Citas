@@ -13,9 +13,12 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fontsource/staatliches": "^5.2.5",
     "gh-pages": "^6.3.0",
+    "normalize.css": "^8.0.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "skeleton-css": "^2.0.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

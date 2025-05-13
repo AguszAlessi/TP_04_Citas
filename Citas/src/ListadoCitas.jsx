@@ -1,21 +1,25 @@
 import Cita from "./Cita";
-import './index.css';
+import './ListadoCitas.css';
 
-function ListadoCitas({ listadoCitas, onEliminar }) 
+function ListadoCitas({ citas, onEliminar }) 
 {
-  if (!listadoCitas) return null;
+  if (!citas) return null;
   return (
 
-    <div className="one-half column">
+    <div className="lista-citas">
       <h2>Administra tus citas</h2>
-      <div className="cita">
-      <ul>
-            {listadoCitas.map((cita) => (
-              <Cita key={cita.id} cita={cita} onEliminar={() => onEliminar(i)} />
+      
+            {citas.map((cita) => (
+            <Cita
+                key={cita.id}
+                mascota={cita.mascota}
+                dueño={cita.dueño}
+                fecha={cita.fecha}
+                hora={cita.hora}
+                sintomas={cita.sintoma} 
+                onEliminar={() => onEliminar(cita.id)}
+            />
             ))}
-          </ul>
-        <p>Sintomas: <span>Le duele la pierna</span></p><button class="button elimnar u-full-width">Eliminar ×</button>
-      </div>
     </div>
   );
 }

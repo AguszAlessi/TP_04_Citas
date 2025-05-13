@@ -3,7 +3,7 @@ import './Cita.css';
 
 
 
- function Cita ({dueño ,hora ,mascota,fecha, onEliminar}){
+ function Cita ({dueño ,hora ,mascota,fecha,sintomas, onEliminar}){
 
     return (
         <div className="cita">
@@ -11,7 +11,7 @@ import './Cita.css';
         <p>Dueño: <span>{dueño}</span></p>
         <p>Fecha: <span> {fecha}</span></p>
         <p>Hora: <span> {hora}</span></p>
-        <p>Sintomas: <span>{sintomaa}</span></p><button className="button elimnar u-full-width" onClick={onEliminar}> Eliminar ×</button>
+        <p>Sintomas: <span>{sintomas}</span></p><button className="eliminar" onClick={onEliminar}> Eliminar ×</button>
       </div>
     )
 }

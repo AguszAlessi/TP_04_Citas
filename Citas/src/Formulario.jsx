@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './index.css';
+import './Formulario.css';
 
 
 
@@ -12,18 +12,19 @@ function AgregarCita({ onAgregar }) {
 
 
 
-  const handleSubmit = () => {
-    if (mascota.trim() && dueño.trim() && sintoma.trim() && hora.trim() && fecha.trim()) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (mascota.trim() && dueño.trim() && sintomas.trim() && hora.trim() && fecha.trim()) {
       onAgregar({
         mascota: mascota.trim(),
         dueño: dueño.trim(),
-        sintoma: sintoma.trim(),
+        sintoma: sintomas.trim(),
         hora:hora.trim(),
         fecha:fecha.trim()
       });
       setMascota("");
       setDueño("");
-      setSintoma("");
+      setSintomas("");
       setFecha("");
       setHora("");
     }

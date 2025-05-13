@@ -15,19 +15,23 @@
   font-weight: normal;
 }
 
-.cita:first-of-type {
+.cita.first {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 
-.cita:last-of-type {
+.cita.last {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
 
-.button.eliminar,
-.button.eliminar:hover {
-  background-color: #c10059;
-  color: white;
-  margin-top: 2rem;
+.eliminar {
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.eliminar:hover {
+  background-color: #a00047;
 }
