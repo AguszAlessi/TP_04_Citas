@@ -1,75 +1,55 @@
 import { useState } from "react";
-import "./Agregar.css"; 
+import './index.css';
 
-function AgregarSintoma({ onAgregar }) {
+
+
+function AgregarCita({ onAgregar }) {
   const [mascota, setMascota] = useState("");
   const [dueño, setDueño] = useState("");
-  const [sintoma, setSintoma] = useState("");
+  const [sintomas, setSintomas] = useState("");
+  const [hora, setHora] = useState("");
+  const [fecha, setFecha] = useState("");
 
-  const handleClick = () => {
-    if (mascota.trim() && dueño.trim() && sintoma.trim()) {
+
+
+  const handleSubmit = () => {
+    if (mascota.trim() && dueño.trim() && sintoma.trim() && hora.trim() && fecha.trim()) {
       onAgregar({
         mascota: mascota.trim(),
         dueño: dueño.trim(),
         sintoma: sintoma.trim(),
-        creada: new Date()
+        hora:hora.trim(),
+        fecha:fecha.trim()
       });
       setMascota("");
       setDueño("");
       setSintoma("");
+      setFecha("");
+      setHora("");
     }
   };
 
   return (
-    // <div className="AgregarSintoma">
-    //   <form onSubmit={(e) => { e.preventDefault(); handleClick(); }}>
-    //     <input
-    //       type="text"
-    //       placeholder="mascota"
-    //       value={mascota}
-    //       onChange={(e) => setMascota(e.target.value)}
-    //     />
-    //     <input
-    //       type="text"
-    //       placeholder="dueño"
-    //       value={dueño}
-    //       onChange={(e) => setDueño(e.target.value)}
-    //     />
-    //     <input
-    //       type="text"
-    //       placeholder="Escribí tu sintoma"
-    //       value={sintoma}
-    //       onChange={(e) => setSintoma(e.target.value)}
-    //     />
-    //     <button type="submit">Subir Tarea</button>
-    //   </form>
-    // </div>
+    <form onSubmit={handleSubmit}>
+    <label>Nombre Mascota</label>
+    <input type="text" name="mascota" className="u-full-width" placeholder="Nombre Mascota" value={mascota} onChange={e => setMascota(e.target.value)} />
 
-  <div class="one-half column">
-    <h2>Administra tus citas</h2>
-    <div class="cita">
-      <p>Mascota: <span>{mascota}</span></p>
-      <p>Dueño: <span>{dueño}</span></p>
-      <p>Fecha: <span>2021-08-05</span></p>         {/* falta fecha */}
-      <p>Hora: <span>08:20</span></p>               {/* falta hora */}
-      <p>Sintomas: <span>{sintoma}</span></p><button class="button elimnar u-full-width">Eliminar ×</button>
-    </div>
-    <div class="cita">
-      <p>Mascota: <span>Sifon</span></p>
-      <p>Dueño: <span>Flecha</span></p>
-      <p>Fecha: <span>2023-08-05</span></p>
-      <p>Hora: <span>09:24</span></p>
-      <p>Sintomas: <span>Duerme mucho</span></p><button class="button elimnar u-full-width">Eliminar ×</button>
-    </div>
-    <div class="cita">
-      <p>Mascota: <span>Floki</span></p>
-      <p>Dueño: <span>Ari</span></p>
-      <p>Fecha: <span>2023-08-05</span></p>
-      <p>Hora: <span>16:15</span></p>
-      <p>Sintomas: <span>No está comiendo</span></p><button class="button elimnar u-full-width">Eliminar ×</button>
-    </div>
-  </div>
+    <label>Nombre Dueño</label>
+    <input type="text" name="propietario" className="u-full-width" placeholder="Nombre dueño de la mascota" value={dueño} onChange={e => setDueño(e.target.value)} />
+
+    <label>Fecha</label>
+    <input type="date" name="fecha" className="u-full-width" value={fecha} onChange={e => setFecha(e.target.value)} />
+
+    <label>Hora</label>
+    <input type="time" name="hora" className="u-full-width" value={hora} onChange={e => setHora(e.target.value)} />
+
+    <label>Sintomas</label>
+    <textarea name="sintomas" className="u-full-width" value={sintomas} onChange={e => setSintomas(e.target.value)} />
+
+    <button type="submit" className="u-full-width button-primary">Agregar Cita</button>
+  </form>
+  
   );
 }
 
-export default AgregarSintoma;
+export default AgregarCita;

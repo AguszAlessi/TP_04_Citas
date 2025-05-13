@@ -1,15 +1,18 @@
-import './Cita.css'
+import React from "react";
+import './Cita.css';
 
-function Cita ({cita, onEliminar}){
+
+
+ function Cita ({dueño ,hora ,mascota,fecha, onEliminar}){
 
     return (
-        <div ClassName = "cita">
-        <h3> {cita.nombre} {cita.apellido} </h3>
-        <p> {cita.cita} </p>
-        <small>{new Date(cita.creada).toLocaleTimeString()}</small>
-        <button className="eliminar" onClick={onEliminar}>Eliminar</button>
-
-        </div>
+        <div className="cita">
+        <p>Mascota: <span>{mascota}</span></p>
+        <p>Dueño: <span>{dueño}</span></p>
+        <p>Fecha: <span> {fecha}</span></p>
+        <p>Hora: <span> {hora}</span></p>
+        <p>Sintomas: <span>{sintomaa}</span></p><button className="button elimnar u-full-width" onClick={onEliminar}> Eliminar ×</button>
+      </div>
     )
 }
 export default Cita;
