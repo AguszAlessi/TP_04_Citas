@@ -9,7 +9,7 @@ input[type="date"],
 input[type="time"],
 textarea {
   height: 38px;
-  padding: 6px 10px;
+  padding: 1px 20px;
   background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
@@ -30,7 +30,7 @@ textarea {
   color: white;
   border: none;
   margin-top: 1rem;
-  padding: 0.7rem;
+  
   font-weight: bold;
   text-transform: uppercase;
   width: 100%;

@@ -6,6 +6,7 @@ import './Cita.css';
  function Cita ({dueño ,hora ,mascota,fecha,sintomas, onEliminar}){
 
     return (
+      
         <div className="cita">
         <p>Mascota: <span>{mascota}</span></p>
         <p>Dueño: <span>{dueño}</span></p>

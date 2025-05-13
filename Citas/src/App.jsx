@@ -3,10 +3,17 @@ import AgregarCita from "./Formulario";
 import ListadoCitas from './ListadoCitas';
 import './App.css';
 
-
-
   export default function App() {
-   const [citas,setCitas] = useState([]);
+ const [citas, setCitas] = useState([
+  {
+    id: 1,
+    mascota: "Nina",
+    dueño: "Martin",
+    fecha: "2021-08-05",
+    hora: "08:20",
+    sintoma: "Le duele la pierna"
+  }
+]);
     
     const agregarCita = (nuevo) => {
     setCitas([...citas, {...nuevo, id: Date.now()}]);
