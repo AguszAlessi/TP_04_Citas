@@ -27,6 +27,7 @@ function AgregarCita({ onAgregar }) {
       setSintomas("");
       setFecha("");
       setHora("");
+      localStorage
     }
   };
 
